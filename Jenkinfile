@@ -44,3 +44,4 @@ pipeline {
           sh 'docker push sjyotsnadevops/insure-me:1.0'             
              }
      }
+}
