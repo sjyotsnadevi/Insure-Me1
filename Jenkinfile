@@ -9,7 +9,7 @@ pipeline {
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-        git branch: 'main', url: 'https://github.com/sjyotsnadevi/Insure-Me.git'
+        git branch: 'main', url: 'https://github.com/sjyotsnadevi/Insure-Me1.git'
             }
     }
     stage('Package') {
@@ -33,7 +33,7 @@ pipeline {
     stage('Docker Login') {
       steps {
          echo 'Docker Login successfully'
-         withCredentials([usernamePassword(credentialsId: 'dockerhub-login', passwordVariable: 'dockerhub-pass', usernameVariable: 'dockerhub-user')]) {
+         withCredentials([usernamePassword(credentialsId: 'Dockerlogin', passwordVariable: 'dockerhub-pass', usernameVariable: 'dockerhub-user')]) {
          sh 'docker login -u ${env.dockerhub-user} -p ${env.dockerhub-pass}'
                                }
              }
