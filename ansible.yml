@@ -15,3 +15,9 @@
     command: sudo systemctl start docker
     become: yes
     become_user: root
+
+  - name: Deploy the Image and Run as a Docker Container
+    command: docker pull sjyotsnadevops/insure-me:1.0
+    command: docker run -itd 8084:8081 sjyotsnadevops/insure-me:1.0
+
+
