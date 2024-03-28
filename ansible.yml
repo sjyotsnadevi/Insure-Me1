@@ -17,6 +17,6 @@
     become_user: root
 
   - name: Deploy the Image and Run as a Docker Container
-    command: docker run -itd -p 8084:8081 sjyotsnadevops/insure-me:1.0
+    command: docker run -itd -p 8084:8081 sjyotsnadevops/insure-me:2.0
 
 
