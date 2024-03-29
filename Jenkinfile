@@ -9,7 +9,7 @@ pipeline {
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-        git branch: 'main', url: 'https://github.com/sjyotsnadevi/Insure-Me.git'
+        git branch: 'main', url: 'https://github.com/sjyotsnadevi/Insure-Me1.git'
             }
     }
     stage('Package') {
@@ -27,7 +27,7 @@ pipeline {
     stage('Create Docker Image') {
        steps {
           echo 'Create a Docker Image'
-          sh 'docker build -t sjyotsnadevops/insure-me:2.0 .'
+          sh 'docker build -t sjyotsnadevops/insure-me:1.0 .'
              }
     }
     stage('Docker Login') {
@@ -41,7 +41,7 @@ pipeline {
     stage('Push the Docker Image to Dockerhub') {
        steps {
           echo 'Push the Docker Image to Dockerhub'
-          sh 'docker push sjyotsnadevops/insure-me:2.0'             
+          sh 'docker push sjyotsnadevops/insure-me:1.0'             
              }
      }
      stage('Ansible Configure and Deployment'){
